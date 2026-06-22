@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Canopy Kitchen is Jonny's geographical inquiry website about tropical rainforests as a food-producing biome, the threats to food production, and sustainable management."
+    />
+    <title>Canopy Kitchen | Sustainable Biomes</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-mode="food">
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <canvas id="atmosphere" aria-hidden="true"></canvas>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <header class="site-header" aria-label="Site navigation">
+      <a class="brand" href="#top" aria-label="Canopy Kitchen home">
+        <span>Canopy</span>
+        <span>Kitchen</span>
+      </a>
+      <nav>
+        <a href="#biome">Biome</a>
+        <a href="#food">Food</a>
+        <a href="#threats">Threats</a>
+        <a href="#future">Future</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/rainforest-hero.png" alt="" />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Geographical inquiry by Jonny</p>
+          <h1 id="hero-title">The rainforest is already on your plate.</h1>
+          <p class="hero-lede">
+            Tropical rainforests are not just scenery. They help produce cocoa,
+            coffee, bananas, cassava, spices, fruits, nuts, clean water, and
+            climate stability. When the canopy breaks, food systems break with it.
+          </p>
+          <div class="hero-actions" aria-label="Page actions">
+            <a class="primary-action" href="#biome">Enter the biome</a>
+            <button class="ghost-action" type="button" data-jump-video>
+              Play field films
+            </button>
+          </div>
+        </div>
+        <div class="mode-switch" aria-label="Story lens">
+          <button type="button" class="is-active" data-mode-button="food">
+            Food flow
+          </button>
+          <button type="button" data-mode-button="threat">
+            Pressure
+          </button>
+          <button type="button" data-mode-button="future">
+            Recovery
+          </button>
+        </div>
+        <p class="scroll-cue">Scroll to descend</p>
+      </section>
+
+      <section class="intro-band" id="biome" aria-labelledby="biome-title">
+        <div class="section-grid">
+          <div class="chapter reveal">
+            <p class="chapter-kicker">Chosen biome</p>
+            <h2 id="biome-title">Tropical rainforest: a living food engine.</h2>
+          </div>
+          <div class="chapter-text reveal">
+            <p>
+              Tropical rainforests are warm, wet, layered ecosystems near the
+              equator. Their food value comes from more than harvests: they store
+              genetic diversity, shelter pollinators, recycle rainfall, protect
+              soils, and support communities who depend on forest products and
+              forest-friendly farming.
+            </p>
+            <p>
+              FAO reports that forests cover about 31 percent of Earth's land area
+              and that people benefit from forest biodiversity through carbon,
+              water, nutrient cycles, and links with food production.
+            </p>
+          </div>
+        </div>
+        <ul class="stat-strip" aria-label="Key rainforest facts">
+          <li class="reveal">
+            <span>31%</span>
+            <p>of global land area is covered by forests.</p>
+          </li>
+          <li class="reveal">
+            <span>60%</span>
+            <p>of known vascular plant species are found in tropical forests.</p>
+          </li>
+          <li class="reveal">
+            <span>86m</span>
+            <p>green jobs are provided by forests worldwide.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="food-section" id="food" aria-labelledby="food-title">
+        <div class="section-grid">
+          <div class="chapter reveal">
+            <p class="chapter-kicker">Food production</p>
+            <h2 id="food-title">The canopy feeds cities you have never seen.</h2>
+          </div>
+          <div class="chapter-text reveal">
+            <p>
+              Many rainforest foods are global staples or high-value crops. Cocoa
+              becomes chocolate. Coffee cherries become morning routines. Bananas
+              travel through global markets. Cassava feeds millions in the tropics.
+              Forest fruits, nuts, oils, spices, and medicines add more layers to
+              the biome's value.
+            </p>
+          </div>
+        </div>
+
+        <div class="crop-marquee" aria-label="Rainforest foods">
+          <div>
+            <span>Cocoa</span>
+            <span>Coffee</span>
+            <span>Bananas</span>
+            <span>Cassava</span>
+            <span>Acai</span>
+            <span>Brazil nuts</span>
+            <span>Vanilla</span>
+            <span>Pepper</span>
+          </div>
+          <div aria-hidden="true">
+            <span>Cocoa</span>
+            <span>Coffee</span>
+            <span>Bananas</span>
+            <span>Cassava</span>
+            <span>Acai</span>
+            <span>Brazil nuts</span>
+            <span>Vanilla</span>
+            <span>Pepper</span>
+          </div>
+        </div>
+
+        <div class="food-map reveal" aria-label="Food system links">
+          <div class="map-node main-node">Rainforest biome</div>
+          <div class="map-link" style="--angle: 16deg"></div>
+          <div class="map-link" style="--angle: 92deg"></div>
+          <div class="map-link" style="--angle: 154deg"></div>
+          <div class="map-node node-a">Food crops</div>
+          <div class="map-node node-b">Rainfall</div>
+          <div class="map-node node-c">Pollinators</div>
+          <div class="map-node node-d">Livelihoods</div>
+          <p class="map-caption">
+            Food production depends on invisible services: rain, soil life,
+            pollination, seed diversity, and people with secure rights to manage
+            land well.
+          </p>
+        </div>
+      </section>
+
+      <section class="film-section" id="films" aria-labelledby="films-title">
+        <div class="film-heading reveal">
+          <p class="chapter-kicker">Animated field films</p>
+          <h2 id="films-title">Three loops show what is at stake.</h2>
+        </div>
+        <div class="film-grid">
+          <article class="film-card reveal">
+            <canvas class="mini-film" data-scene="food" width="640" height="420"></canvas>
+            <div>
+              <p class="film-number">01</p>
+              <h3>Food flow</h3>
+              <p>
+                Crops grow below canopy layers while rain, nutrients, and
+                pollinators move through the system.
+              </p>
+            </div>
+          </article>
+          <article class="film-card reveal">
+            <canvas class="mini-film" data-scene="threat" width="640" height="420"></canvas>
+            <div>
+              <p class="film-number">02</p>
+              <h3>Pressure</h3>
+              <p>
+                Clearing, heat, fire risk, soil erosion, and monoculture make food
+                supplies less reliable.
+              </p>
+            </div>
+          </article>
+          <article class="film-card reveal">
+            <canvas class="mini-film" data-scene="future" width="640" height="420"></canvas>
+            <div>
+              <p class="film-number">03</p>
+              <h3>Recovery</h3>
+              <p>
+                Agroforestry, restoration, and deforestation-free supply chains
+                keep food production connected to living forest.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="threat-section" id="threats" aria-labelledby="threat-title">
+        <div class="section-grid">
+          <div class="chapter reveal">
+            <p class="chapter-kicker">Current threats</p>
+            <h2 id="threat-title">The same demand for food can damage the biome that feeds us.</h2>
+          </div>
+          <div class="chapter-text reveal">
+            <p>
+              FAO estimates that 420 million hectares of forest have been lost
+              since 1990 through conversion to other land uses. From 2015 to 2020,
+              deforestation was about 10 million hectares per year.
+            </p>
+            <p>
+              Agricultural expansion is the main driver. Between 2000 and 2010,
+              large-scale commercial agriculture accounted for about 40 percent of
+              tropical deforestation, while local subsistence agriculture accounted
+              for another 33 percent.
+            </p>
+          </div>
+        </div>
+        <div class="threat-grid">
+          <article class="threat-item reveal">
+            <span>01</span>
+            <h3>Forest conversion</h3>
+            <p>
+              Forest is cleared for cattle, soy, oil palm, roads, mining, and
+              expanding settlements. This removes habitat and breaks food webs.
+            </p>
+          </article>
+          <article class="threat-item reveal">
+            <span>02</span>
+            <h3>Monoculture farming</h3>
+            <p>
+              Single-crop plantations can replace diverse forest layers, reducing
+              pollinators, soil organisms, and long-term crop resilience.
+            </p>
+          </article>
+          <article class="threat-item reveal">
+            <span>03</span>
+            <h3>Climate stress</h3>
+            <p>
+              Hotter temperatures, drought, extreme rain, and fire make crops such
+              as cocoa and coffee more vulnerable to disease and failed harvests.
+            </p>
+          </article>
+          <article class="threat-item reveal">
+            <span>04</span>
+            <h3>Soil and water loss</h3>
+            <p>
+              When canopy cover disappears, rain hits bare soil directly. Erosion
+              strips nutrients and muddies rivers that farms and communities need.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="future-section" id="future" aria-labelledby="future-title">
+        <div class="section-grid">
+          <div class="chapter reveal">
+            <p class="chapter-kicker">Sustainable management</p>
+            <h2 id="future-title">A food future that keeps the forest standing.</h2>
+          </div>
+          <div class="chapter-text reveal">
+            <p>
+              The goal is not to lock people out of rainforests. It is to manage
+              landscapes so food, income, biodiversity, and climate stability can
+              survive together.
+            </p>
+          </div>
+        </div>
+
+        <div class="solution-lane">
+          <article class="solution reveal">
+            <div class="solution-marker"></div>
+            <h3>Grow in layers</h3>
+            <p>
+              Use agroforestry: cocoa, coffee, fruits, and spices can grow under
+              shade trees, imitating forest structure and protecting soil.
+            </p>
+          </article>
+          <article class="solution reveal">
+            <div class="solution-marker"></div>
+            <h3>Protect intact forest</h3>
+            <p>
+              Strong protected areas, land-tenure security, and respect for
+              Indigenous and local knowledge reduce destructive clearing.
+            </p>
+          </article>
+          <article class="solution reveal">
+            <div class="solution-marker"></div>
+            <h3>Restore degraded land</h3>
+            <p>
+              Replant native trees, reconnect corridors, and improve exhausted
+              farmland instead of clearing new forest.
+            </p>
+          </article>
+          <article class="solution reveal">
+            <div class="solution-marker"></div>
+            <h3>Buy deforestation-free</h3>
+            <p>
+              Companies and consumers can demand cocoa, coffee, palm oil, and other
+              products that do not come from newly cleared forest.
+            </p>
+          </article>
+          <article class="solution reveal">
+            <div class="solution-marker"></div>
+            <h3>Waste less food</h3>
+            <p>
+              Less waste lowers pressure to convert more forest into farms, which
+              protects the biome and the food system.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="action-section" aria-labelledby="action-title">
+        <div class="action-copy reveal">
+          <p class="chapter-kicker">Final message</p>
+          <h2 id="action-title">Feed people without eating the forest.</h2>
+          <p>
+            Tropical rainforests are food producers, water machines, climate
+            regulators, genetic libraries, and homes. The future of rainforest food
+            is not bigger scars. It is smarter landscapes.
+          </p>
+        </div>
+        <div class="pledge reveal" aria-live="polite">
+          <p class="pledge-label">Build the future plan</p>
+          <button type="button" data-plan="Shade-grown crops protect food and canopy.">
+            Shade crops
+          </button>
+          <button type="button" data-plan="Secure land rights help communities protect forests.">
+            Land rights
+          </button>
+          <button type="button" data-plan="Restoration turns damaged land into productive forest mosaics.">
+            Restore land
+          </button>
+          <p class="pledge-output">
+            Select a strategy to see how this biome can be managed more sustainably.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>Canopy Kitchen</p>
+        <p>Geographical inquiry: Sustainable biomes</p>
+        <p>Created for Jonny</p>
+      </div>
+      <div class="sources">
+        <p>Sources</p>
+        <a href="https://www.fao.org/interactive/state-of-forests/2020/en/" target="_blank" rel="noreferrer">
+          FAO, State of the World's Forests 2020
+        </a>
+        <a href="https://www.awwwards.com/websites/sites_of_the_year/" target="_blank" rel="noreferrer">
+          Awwwards, Sites of the Year
+        </a>
+        <a href="https://persepolis.getty.edu/" target="_blank" rel="noreferrer">
+          Getty, Persepolis Reimagined
+        </a>
+      </div>
+    </footer>
+
+    <noscript>
+      <p class="noscript">
+        This website still works without JavaScript, but the animated field films
+        and scroll effects need JavaScript to play.
+      </p>
+    </noscript>
+    <script src="app.js" defer></script>
+  </body>
+</html>
